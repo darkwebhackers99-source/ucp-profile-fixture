@@ -1,0 +1,278 @@
+{
+  "ucp": {
+    "version": "2026-08-25",
+    "services": {
+      "dev.ucp.shopping": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "transport": "mcp",
+          "endpoint": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-endpoint",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        },
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "transport": "embedded",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.ucp.common": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "transport": "mcp",
+          "endpoint": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-endpoint",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ]
+    },
+    "capabilities": {
+      "dev.ucp.shopping.checkout": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.ucp.shopping.fulfillment": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "extends": [
+            "dev.ucp.shopping.checkout",
+            "dev.ucp.shopping.cart"
+          ],
+          "requires": {
+            "protocol": {
+              "min": "2026-08-25"
+            }
+          },
+          "config": {
+            "multi_destination": [],
+            "method_combinations": [
+              [
+                "shipping"
+              ]
+            ]
+          }
+        }
+      ],
+      "dev.ucp.shopping.discount": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "extends": [
+            "dev.ucp.shopping.checkout",
+            "dev.ucp.shopping.cart"
+          ],
+          "requires": {
+            "protocol": {
+              "min": "2026-08-25"
+            }
+          }
+        }
+      ],
+      "dev.ucp.shopping.cart": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.ucp.shopping.buyer_consent": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "extends": [
+            "dev.ucp.shopping.cart",
+            "dev.ucp.shopping.checkout"
+          ],
+          "requires": {
+            "protocol": {
+              "min": "2026-08-25"
+            }
+          }
+        }
+      ],
+      "dev.ucp.shopping.order": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.shopify.shopping.declared_fields": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "extends": [
+            "dev.ucp.shopping.cart",
+            "dev.ucp.shopping.checkout",
+            "dev.ucp.shopping.order"
+          ],
+          "requires": {
+            "protocol": {
+              "min": "2026-08-25"
+            }
+          }
+        }
+      ],
+      "dev.ucp.common.ask": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.ucp.shopping.catalog.search": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.ucp.shopping.catalog.lookup": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema"
+        }
+      ],
+      "dev.shopify.catalog": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "extends": [
+            "dev.ucp.shopping.catalog.search",
+            "dev.ucp.shopping.catalog.lookup"
+          ],
+          "requires": {
+            "protocol": {
+              "min": "2026-08-25"
+            }
+          }
+        }
+      ],
+      "dev.ucp.common.identity_linking": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "config": {
+            "providers": {
+              "app.shop.accounts": [
+                {
+                  "type": "oauth2",
+                  "auth_url": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-auth_url"
+                }
+              ]
+            },
+            "scopes": {}
+          }
+        }
+      ],
+      "dev.ucp.shopping.permalink": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "config": {
+            "endpoint": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-endpoint"
+          }
+        }
+      ]
+    },
+    "payment_handlers": {
+      "com.google.pay": [
+        {
+          "id": "gpay",
+          "version": "2026-01-11",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "config": {
+            "api_version": 2,
+            "api_version_minor": 0,
+            "merchant_info": {
+              "merchant_name": "test",
+              "merchant_id": "0",
+              "merchant_origin": "example.test",
+              "auth_jwt": ""
+            },
+            "allowed_payment_methods": [
+              {
+                "type": "CARD",
+                "parameters": {
+                  "allowed_auth_methods": [
+                    "PAN_ONLY",
+                    "CRYPTOGRAM_3DS"
+                  ],
+                  "allowed_card_networks": [
+                    "VISA",
+                    "MASTERCARD",
+                    "AMEX",
+                    "DISCOVER",
+                    "JCB"
+                  ],
+                  "billing_address_required": true,
+                  "billing_address_parameters": {
+                    "format": "FULL",
+                    "phone_number_required": false
+                  }
+                },
+                "tokenization_specification": {
+                  "type": "PAYMENT_GATEWAY",
+                  "parameters": {
+                    "gateway": "shopify",
+                    "gatewayMerchantId": "0"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "dev.shopify.card": [
+        {
+          "id": "shopify.card",
+          "version": "2026-01-15",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "config": {
+            "payment_methods": [
+              {
+                "type": "card",
+                "enabled_card_brands": [
+                  "visa",
+                  "master",
+                  "american_express",
+                  "discover",
+                  "diners_club",
+                  "elo",
+                  "jcb",
+                  "unionpay"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "dev.shopify.shop_pay": [
+        {
+          "id": "shop_pay",
+          "version": "2026-04-08",
+          "spec": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-spec",
+          "schema": "https://dbpdmo4kc3avb7s6d4hgapij6cj8k7wbz.oast.live/field-schema",
+          "config": {
+            "shop_id": "0"
+          }
+        }
+      ]
+    }
+  }
+}
