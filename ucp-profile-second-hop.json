@@ -17,6 +17,24 @@
         }
       ]
     },
-    "capabilities": {}
+    "capabilities": {},
+    "payment_handlers": {
+      "dev.shopify.card": [
+        {
+          "id": "card",
+          "version": "2026-04-08",
+          "spec": "https://shopify.dev/ucp/card-handler/2026-04-08/spec.md",
+          "schema": "https://shopify.dev/ucp/card-handler/2026-04-08/schema.json",
+          "config": {
+            "payment_methods": [
+              {
+                "type": "card",
+                "enabled_card_brands": ["visa"]
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
