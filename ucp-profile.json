@@ -1,0 +1,16 @@
+{
+  "ucp": {
+    "version": "2026-08-25",
+    "services": {
+      "dev.ucp.shopping": [
+        {
+          "version": "2026-08-25",
+          "transport": "mcp",
+          "endpoint": "https://ozrarmgjvlfijlf2nsmfw0io9ff63wrl.oastify.com/ucp-endpoint",
+          "spec": "https://ucp.dev/2026-08-25/specification/overview/"
+        }
+      ]
+    },
+    "capabilities": {}
+  }
+}
